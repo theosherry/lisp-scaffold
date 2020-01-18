@@ -1,5 +1,10 @@
 #!/bin/zsh
 
+if [ "$1" = "-h" ] ; then
+    echo "Usage: `basename $0` [-h] project_name"
+    exit 0
+fi
+
 if [ "$1" = "" ]; then
     echo "ERROR: project name is a required positional argument"
     exit 1
